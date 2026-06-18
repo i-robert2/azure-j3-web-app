@@ -13,6 +13,10 @@ export function initInsights(): void {
       connectionString,
       enableAutoRouteTracking: true,
       disableFetchTracking: false,
+      // Cookieless mode: no first/third-party cookies. More privacy-friendly
+      // (no consent banner needed) and avoids the Lighthouse best-practices
+      // penalty for third-party cookies.
+      disableCookiesUsage: true,
     },
   });
   appInsights.loadAppInsights();
