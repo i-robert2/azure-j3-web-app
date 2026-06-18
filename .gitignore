@@ -1,0 +1,19 @@
+# Node / Astro
+node_modules/
+dist/
+.astro/
+*.log
+.DS_Store
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+!example.tfvars
+backend.hcl
+crash.log
+
+# IDE
+.vscode/
+.idea/
