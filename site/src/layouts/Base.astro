@@ -44,5 +44,16 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <footer>
       <p>Built with Astro &middot; Deployed on Azure Static Web Apps</p>
     </footer>
+    <script>
+      // Load Application Insights after the page is idle so it never blocks
+      // first paint (keeps the Lighthouse performance budget healthy).
+      import { initInsights } from "../lib/insights";
+      const start = () => initInsights();
+      if ("requestIdleCallback" in window) {
+        requestIdleCallback(start);
+      } else {
+        setTimeout(start, 1500);
+      }
+    </script>
   </body>
 </html>

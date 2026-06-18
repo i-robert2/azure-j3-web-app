@@ -9,6 +9,7 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@microsoft/applicationinsights-web": "^3.4.1",
     "astro": "^4.16.18"
   }
 }
