@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+
+const projects = [
+  { id: "J1", name: "VM fleet + Bastion", desc: "Hardened Linux VMs, no public IPs, Bastion access, monitoring, managed-identity backups." },
+  { id: "J2", name: "Container Apps + GitHub Actions", desc: "Flask API, OIDC CI/CD, ACR, scale-to-zero Container Apps." },
+  { id: "J3", name: "Static Web App + custom domain", desc: "This site: Azure Static Web Apps, TLS, App Insights, Lighthouse CI." },
+];
+---
+<Base title="Projects" description="Azure DevOps learning projects: IaC, CI/CD, containers, and static web hosting.">
+  <h1>Projects</h1>
+  <ul>
+    {projects.map((p) => (
+      <li><strong>{p.id}</strong> &mdash; {p.name}: {p.desc}</li>
+    ))}
+  </ul>
+  <p><a href="/">&larr; Home</a></p>
+</Base>
