@@ -216,6 +216,8 @@ Real problems from building this for real — the root-cause/fix is the useful p
 
 ## Cost
 
+Static Web Apps **Free** SKU is €0 (100 GB bandwidth, free managed TLS). Application Insights + Log Analytics stay under the 5 GB/month free tier for a lab. **Total: ~€0/month.** (A custom-domain build adds an Azure DNS zone at ~€0.45/mo.)
+
 ---
 
 ## License
